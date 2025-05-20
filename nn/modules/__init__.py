@@ -16,7 +16,10 @@ Examples:
     >>> torch.onnx.export(m, x, f)
     >>> os.system(f"onnxslim {f} {f} && open {f}")  # pip install onnxslim
 """
-
+from .bifpn import (
+    BiFPN_Concat2,
+    BiFPN_Concat3
+)
 from .block import (
     C1,
     C2,
@@ -73,8 +76,6 @@ from .conv import (
     GhostConv,
     Index,
     LightConv,
-    BiFPN_Concat2,
-    BiFPN_Concat3,
     HSFPN,
     RepConv,
     SpatialAttention,
