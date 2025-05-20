@@ -631,7 +631,7 @@ def parse_model(d, ch, verbose=True):  # model_dict, input_channels(3)
                     args[j] = locals()[a] if a in locals() else ast.literal_eval(a)
 
         n = n_ = max(round(n * depth), 1) if n > 1 else n  # depth gain
-        if m in (Classify, Conv, GSConv, BoT3, BiLevelRoutingAttention, Involution, CBAM, CoordAtt, VoVGSCSP, RepViTBlock, ConvTranspose, GhostConv, Bottleneck, GhostBottleneck, SPP, SPPF, DWConv, Focus,
+        if m in (Classify, Conv, GSConv, BoT3, BiLevelRoutingAttention, Involution, CBAM, BiFPN_Concat2, BiFPN_Concat3,, CoordAtt, VoVGSCSP, RepViTBlock, ConvTranspose, GhostConv, Bottleneck, GhostBottleneck, SPP, SPPF, DWConv, Focus,
                  BottleneckCSP, C1, C2, C2f, C2f_Bottleneck_ATT, C3, C3TR, C3Ghost, nn.ConvTranspose2d,HSFPN, C2f_DCN, DWConvTranspose2d, C3x, RepC3):
             c1, c2 = ch[f], args[0]
             if c2 != nc:  # if c2 not equal to number of classes (i.e. for Classify() output)
