@@ -14,7 +14,8 @@ from ultralytics.nn.modules import (AIFI, C1, C2, C3, C3TR, SPP, SPPF, Bottlenec
                                     Focus, GhostBottleneck, GhostConv, HGBlock, HGStem, Pose, RepC3, RepConv,
                                     RTDETRDecoder, Segment)
 from ultralytics.nn.modules.block import C2f_DCN
-from ultralytics.nn.modules.conv import BiFPN_Concat2, BiFPN_Concat3, HSFPN
+from ultralytics.nn.modules.conv import HSFPN
+from ultralytics.nn.modules.bifpn import BiFPN_Concat2 ,BiFPN_Concat3
 globals()['BiFPN_Concat3'] = BiFPN_Concat3
 globals()['BiFPN_Concat2'] = BiFPN_Concat2
 from ultralytics.yolo.utils import DEFAULT_CFG_DICT, DEFAULT_CFG_KEYS, LOGGER, colorstr, emojis, yaml_load
